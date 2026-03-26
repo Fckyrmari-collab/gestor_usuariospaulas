@@ -1,0 +1,107 @@
+/* login.css */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fce4ec; /* Rosa de fondo */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card {
+    background: white;
+    width: 350px;
+    padding: 60px 40px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    text-align: center;
+    position: relative;
+}
+
+.login-header {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.active-tab {
+    font-size: 22px;
+    font-weight: bold;
+    color: #000;
+    border-bottom: 3px solid #000;
+    margin-right: 15px;
+    padding-bottom: 5px;
+}
+
+.inactive-tab {
+    font-size: 22px;
+    color: #ccc;
+    font-weight: bold;
+}
+
+.input-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.form-label {
+    font-size: 10px;
+    font-weight: bold;
+    color: #999;
+    display: block;
+    letter-spacing: 1px;
+}
+
+.form-control {
+    width: 100%;
+    border: none;
+    border-bottom: 1.5px solid #eee; /* Solo la línea inferior */
+    padding: 10px 0;
+    outline: none;
+    font-size: 14px;
+    background: transparent;
+}
+
+.form-control:focus {
+    border-bottom: 1.5px solid #000;
+}
+
+.remember-me {
+    text-align: left;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.remember-me label {
+    font-size: 10px;
+    color: #999;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.button {
+    width: 100%;
+    background: #000;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50px; /* Redondeado total */
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 30px;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.forgot-link {
+    display: block;
+    margin-top: 25px;
+    font-size: 10px;
+    color: #bbb;
+    text-decoration: none;
+    font-weight: bold;
+}
