@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='login.css')}}">
+</head>
+<body>
+
+<div class="login-container"> <div class="card">
+        <div class="login-header">
+            <span class="active-tab">Sign In</span>
+            <span class="inactive-tab">Sign Up</span>
+        </div>
+
+        <form method="POST" action="{{url_for('login_form')}}">
+            <div class="input-group">
+                <label class="form-label">USERNAME</label>
+                <input type="text" class="form-control" name="txtusuario" placeholder="Type here..." required>
+            </div>
+
+            <div class="input-group">
+                <label class="form-label">PASSWORD</label>
+                <input type="password" class="form-control" name="txtcontraseña" placeholder="Type here..." required>
+            </div>
+
+            <div class="remember-me">
+                 <input type="checkbox" id="remember">
+                 <label for="remember">REMEMBER ME</label>
+            </div>
+
+            <button type="submit" class="button">SIGN ME UP!</button>
+
+            <a href="#" class="forgot-link">FORGOT YOUR PASSWORD?</a>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
