@@ -1,0 +1,51 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Usuarios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card shadow p-4">
+            <h2 class="text-center mb-4">Usuarios Registrados</h2>
+            
+            <div class="mb-3">
+                <a href="{{url_for('login')}}" class="btn btn-secondary">Volver al Inicio</a>
+                
+            </div>
+
+            <table class="table table-bordered table-striped mt-3">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Código</th>
+                        <th>Usuario</th>
+                        <th>Contraseña</th>
+                        <th>Rol</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for u in user %}
+                    <tr>
+                        <td>{{ u[0] }}</td>
+                        <td>{{ u[1] }}</td>
+                        <td>{{ u[2] }}</td>
+                        <td>{{ u[3] }}</td>
+                        <td>
+                           <a href="" class="btn btn-warning btn-sm">Editar</a>
+                           <a href="{{ url_for('eliminarusu', id=u[0]) }}" 
+                             class="btn btn-danger btn-sm" 
+                             onclick="return confirm('¿Estás seguro de eliminar este usuario?')">
+                             Eliminar
+                              </a>
+                            
+                       </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

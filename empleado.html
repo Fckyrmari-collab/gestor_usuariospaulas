@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Empleado</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container mt-5 text-center">
+    <div class="card p-5 shadow">
+
+        <h1>Bienvenido empleado</h1>
+        <h3>{{ usuario }}</h3>
+
+        <a href="{{ url_for('salir') }}" class="btn btn-rosa mt-3">Cerrar sesión</a>
+
+    </div>
+</div>
+
+</body>
+</html>
